@@ -1,5 +1,7 @@
 # crazy-ranking
 
+Should do when have time
+
 ## Links
 
 - Demo: http://event.17.media/pretest
