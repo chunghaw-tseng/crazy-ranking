@@ -1,21 +1,21 @@
-import React from 'react'
-import {Card, NameTag, TotalPoints} from './rankingStyles'
+import React, { useEffect, useState } from 'react'
+import {Avatar, Card, NameTag, TotalPoints} from './rankingStyles'
 
 interface RankingTabProps{
-    key: number,
+    dataKey: number,
     name: string,
     points: number,
     // Need to check this
     image: any
 }
-// type RankngTabState = {
 
-// }
-
-export const RankingTab : React.FC<RankingTabProps> = ({key, name, points, image}) => {
+// TODO Make the style look better
+// Use icons instead of image
+export const RankingTab : React.FC<RankingTabProps> = ({dataKey, name, points, image}) => {
 
     return (
-    <Card>
+    <Card data-key={dataKey}>
+        <Avatar>{image}</Avatar>
         <NameTag>{name}</NameTag>
         <TotalPoints>{points}</TotalPoints>
     </Card>);
